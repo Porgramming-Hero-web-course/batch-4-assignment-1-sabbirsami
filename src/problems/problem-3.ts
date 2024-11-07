@@ -3,7 +3,7 @@ const countWordOccurrences = (sentence: string, word: string): number => {
   let numberOfWordOccurrence = 0;
   const numberOfWordOccurrences = lowercaseSentenceArray.filter(
     (singleWord) => {
-      if (singleWord.includes(word)) {
+      if (singleWord.includes(word.toLowerCase())) {
         numberOfWordOccurrence++;
       }
     }
@@ -13,7 +13,7 @@ const countWordOccurrences = (sentence: string, word: string): number => {
 
 const sentence = "TypeScript is great. I love $TypeScript!%%";
 
-console.log(countWordOccurrences(sentence, "typescript"));
+console.log(countWordOccurrences(sentence, "typeSCript"));
 
 /* const countWordOccurrences = (sentence: string, word: string)=> {
   let splitSentence = sentence.split(" ");
