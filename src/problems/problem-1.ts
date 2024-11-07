@@ -1,8 +1,11 @@
-const removeDuplicates = (numbers: number[]): number[] => {
-  const removeDuplicatesArray = [...new Set(numbers)];
-  return removeDuplicatesArray;
+const sumArray = (numbers: number[]): number => {
+  const total = numbers.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
+  return total;
 };
 
-const duplicatesArray = [1, 2, 2, 3, 4, 4, 5];
+const input = [1, 2, 3, 4, 5];
 
-console.log(removeDuplicates(duplicatesArray));
+console.log(sumArray(input));
