@@ -1,5 +1,6 @@
-The significance of union and intersection types in Typescript.
+# The significance of union and intersection types in Typescript.
 
+### Union Types: 
 In typescript union work like or it allow a variable to have several types for example:
 
 ```typescript
@@ -33,12 +34,14 @@ const calculateShapeArea = (shape: Circle | Rectangle): number => {
 };
 ```
 
+### Intersection Types: 
 One the other hand intersection type combines multiple type into a single type it work like and for example:
 
 ```typescript
 
 type PersonType = { name: string } & { age: number };
 
+// Error: Property 'age' is missing in type '{ name: string; }'
 let person: PersonType = {
     name = "name"; // show error
 };
